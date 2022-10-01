@@ -1,3 +1,20 @@
+def saudacao
+    yield
+end
+
+saudacao {puts 'Olá'}
+puts '-----------------'
+
+def chama_bloco
+    puts 'Inicio do método'
+    yield
+    yield
+    puts 'Fim do método'
+end
+
+chama_bloco {puts 'Dentro do método'}
+puts '--------------------'
+
 3.times { puts 'Exec the block' }
 puts '--------------------'
 
